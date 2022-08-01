@@ -1,0 +1,22 @@
+syntax = "proto3";
+package lotterychainnel.lottery;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "lottery-chain-nel/x/lottery/types";
+
+// Msg defines the Msg service.
+service Msg {
+      rpc ClaimOwner(MsgClaimOwner) returns (MsgClaimOwnerResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgClaimOwner {
+  string creator = 1;
+}
+
+message MsgClaimOwnerResponse {
+  bool success = 1;
+}
+
+// this line is used by starport scaffolding # proto/tx/message
